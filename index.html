@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Mero Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="image/png" href="logo.png">
+
+	<script>
+		function back() {
+			var exp = document.calculatrice.textview.value;
+			document.calculatrice.textview.value = exp.substring(0, exp.length - 1);
+		}
+	</script>
+</head>
+
+<body>
+	<div class="calculatrice">
+		<form name="calculatrice">
+			<input name="textview" class="screen" type="textview">
+			<hr class="hr">
+			<hr class="hr">
+		</form>
+
+		<table>
+			<tr>
+				<td><input type="button" class="bn"
+						style="background-color: rgb(226, 7, 7); border: 5px solid rgb(226, 7, 7) !important;"
+						value="AC" onclick=" document.calculatrice.textview.value = ''" /></td>
+				<td><input type="button" class="bn"
+						style="background-color: rgb(226, 7, 7); border: 5px solid rgb(226, 7, 7) !important;" value="C"
+						onclick="back()" /></td>
+				<td><input type="button" class="bn" value="√"
+						onclick="document.calculatrice.textview.value = Math.sqrt(document.calculatrice.textview.value)" />
+				</td>
+				<td><input type="button" class="bn" value="/" onclick="document.calculatrice.textview.value += '/'" />
+				</td>
+			</tr>
+			<tr>
+				<td><input type="button" class="bn"
+						style=" color: black; background-color: #e0f9fc; border: 5px solid #e0f9fc !important;"
+						value="7" onclick="document.calculatrice.textview.value += '7'" /></td>
+				<td><input type="button" class="bn"
+						style="color: black; background-color: #e0f9fc; border: 5px solid #e0f9fc !important;" value="8"
+						onclick="document.calculatrice.textview.value += '8'" /></td>
+				<td><input type="button" class="bn"
+						style="color: black; background-color: #e0f9fc; border: 5px solid #e0f9fc !important;" value="9"
+						onclick="document.calculatrice.textview.value += '9'" /></td>
+				<td><input type="button" class="bn" value="x" onclick="document.calculatrice.textview.value += '*'" />
+				</td>
+			</tr>
+			<tr>
+				<td><input type="button" class="bn"
+						style="color: black; background-color: #e0f9fc; border: 5px solid #e0f9fc !important;" value="4"
+						onclick="document.calculatrice.textview.value += '4'" /></td>
+				<td><input type="button" class="bn"
+						style="color: black; background-color: #e0f9fc; border: 5px solid #e0f9fc !important;" value="5"
+						onclick="document.calculatrice.textview.value += '5'" /></td>
+				<td><input type="button" class="bn"
+						style="color: black; background-color: #e0f9fc; border: 5px solid #e0f9fc !important;" value="6"
+						onclick="document.calculatrice.textview.value += '6'" /></td>
+				<td><input type="button" class="bn" value="-" onclick="document.calculatrice.textview.value += '-'" />
+				</td>
+			</tr>
+			<tr>
+				<td><input type="button" class="bn"
+						style="color: black; background-color: #e0f9fc; border: 5px solid #e0f9fc !important;" value="1"
+						onclick="document.calculatrice.textview.value += '1'" /></td>
+				<td><input type="button" class="bn"
+						style="color: black; background-color: #e0f9fc; border: 5px solid #e0f9fc !important;" value="2"
+						onclick="document.calculatrice.textview.value += '2'" /></td>
+				<td><input type="button" class="bn"
+						style="color: black; background-color: #e0f9fc; border: 5px solid #e0f9fc !important;" value="3"
+						onclick="document.calculatrice.textview.value += '3'" /></td>
+				<td rowspan="2"><input style="height: 118px" type="button" class="bn plus" value="+"
+						onclick="document.calculatrice.textview.value += '+'" /></td>
+			</tr>
+			<tr>
+				<td><input type="button" class="bn"
+						style="color: black; background-color: #e0f9fc; border: 5px solid #e0f9fc !important;" value="0"
+						onclick="document.calculatrice.textview.value += '0'" /></td>
+				<td><input type="button" class="bn" value="." onclick="document.calculatrice.textview.value += '.'" />
+				</td>
+				<td><input type="button" class="bn" value="="
+						onclick="document.calculatrice.textview.value = eval(document.calculatrice.textview.value)" />
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+
+</html>

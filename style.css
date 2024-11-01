@@ -1,0 +1,182 @@
+/* Base Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to left, #8fa8b2, #e0f9fc) no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    width: 100%;
+}
+
+/* Calculator Container */
+.calculatrice {
+    background-color: #697579;
+    width: 250px;
+    height: 425px;
+    padding: 15px;
+    border: 5px solid #697579;
+    border-radius: 8px;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Divider Line */
+.hr {
+    border: 1px solid #e0f9fc;
+}
+
+/* Screen */
+.screen {
+    padding: 15px;
+    margin: 15px 0;
+    border: 5px solid #101010;
+    border-radius: 5px;
+    color: white;
+    background-color: #101010;
+    width: 100%;
+    height: 50px;
+    font-size: 1.2em;
+    text-align: right;
+    box-sizing: border-box;
+}
+
+/* Buttons */
+.bn {
+    outline: none;
+    width: 55px;
+    height: 55px;
+    margin: 2px;
+    background-color: black;
+    border: 5px solid #0b0b0b;
+    border-radius: 4px;
+    color: whitesmoke;
+    font-size: 1.1em;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.bn:hover {
+    transform: scale(1.08);
+}
+
+/* Responsive Design */
+
+/* Medium Devices (Tablets, 768px and up) */
+@media (max-width: 768px) {
+    .calculatrice {
+        width: 220px;
+        height: 380px;
+    }
+    .screen {
+        font-size: 1em;
+        height: 45px;
+    }
+    .bn {
+        width: 50px;
+        height: 50px;
+        font-size: 1em;
+    }
+}
+
+/* Small Devices (Phones, 576px and up) */
+@media (max-width: 576px) {
+    .calculatrice {
+        width: 200px;
+        height: 350px;
+    }
+    .screen {
+        font-size: 0.9em;
+        height: 40px;
+		
+    }
+    .bn {
+        width: 45px;
+        height: 45px;
+        font-size: 0.9em;
+    }
+}
+
+/* Extra Small Devices (Small phones, 360px and up) */
+@media (max-width: 360px) {
+    .calculatrice {
+        width: 180px;
+        height: 320px;
+        padding: 5px;
+    }
+    .screen {
+        font-size: 0.8em;
+        height: 35px;
+		
+    }
+    .bn {
+		
+        width: 40px;
+        height: 40px;
+        font-size: 0.8em;
+        padding: 5px;
+    }
+}
+
+
+
+/* card ............... */
+
+ /* Card Styles */
+ .card {
+	width: 300px;
+	padding: 20px;
+	background-color: #697579;
+	color: white;
+	text-align: center;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	transform: scale(1);
+	transition: transform 0.4s ease;
+	animation: cardEntrance 1s ease forwards;
+}
+
+/* Text Styles */
+.card h1 {
+	font-size: 2em;
+	margin: 0;
+	opacity: 0;
+	transform: translateY(20px);
+	animation: textSlideIn 1s ease forwards 0.4s;
+}
+
+/* Card Hover Animation */
+.card:hover {
+	transform: scale(1.05);
+}
+
+/* Keyframe Animations */
+@keyframes cardEntrance {
+	0% {
+		opacity: 0;
+		transform: scale(0.8);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes textSlideIn {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
